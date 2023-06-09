@@ -1,0 +1,47 @@
+/**
+ *  将主题和主题下个的各个组件挂载到主题下面，生成对应的css
+ */
+@mixin p8-pre-process-context($theme-name) {
+  $p8-theme-name: $theme-name !global;
+}
+
+// **是一个重要方法* => 全局初始化注册的主题：有几个初始化几个，
+// 比如：.p8-theme-default{@content（这个表示后面需要插入的样式内容，包括组件样式等等）} .p8-theme-cosmic{@content}
+@mixin p8-install-global-with-scss-vars() {
+  $enabled-themes: p8-get-enabled-themes();
+  @each $theme-name in $enabled-themes {
+    @include p8-pre-process-context($theme-name);
+    .p8-theme-#{$theme-name} {
+      @content; // 内容来自由@include{ 样式 }
+    }
+  }
+}
+
+@mixin p8-lazy-process-context($theme-name) {
+  $p8-theme-name: $theme-name !global;
+}
+
+@mixin p8-install-component-with-scss-vars() {
+  $enabled-themes: p8-get-enabled-themes();
+  @each $theme-name in $enabled-themes {
+    @include p8-lazy-process-context($theme-name);
+    .p8-theme-#{$theme-name} {
+      @content;
+    }
+  }
+}
+
+// 各个页面(开发中的页面)自定义的css文件也将挂载到注册的主题下
+@mixin p8-install-component() {
+  @include p8-install-component-with-scss-vars() {
+    @content;
+  }
+}
+
+// Entry point
+// 安装全局样式到注册的主题下
+@mixin p8-install() {
+  @include p8-install-global-with-scss-vars() {
+    @content; // 这个地方相当于插槽，来自于{@include p8-theme-global();}
+  }
+}

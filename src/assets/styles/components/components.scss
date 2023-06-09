@@ -1,0 +1,5 @@
+@import "button.component.theme";
+
+@mixin p8-theme-components() {
+  @include p8-button-theme();
+}

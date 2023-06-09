@@ -1,0 +1,36 @@
+
+@function p8-deep-find-value($theme, $key, $value) {
+  $parent-value: map-get($theme, $value);
+
+  @if ($parent-value != null) {
+    @return p8-deep-find-value($theme, $value, $parent-value);
+  }
+  @return $value;
+}
+
+// $p8-theme-name来自于p8-pre-process-context这个混淆
+@function get-current-theme-name() {
+  @if ($p8-theme-name != null) {
+    @return $p8-theme-name;
+  }
+
+  @return get-last-enabled-theme();
+}
+
+// 根据变量读取当前主题中配置的变量初始化的值（map）
+// 比如：p8-theme(layout-window-mode-min-width)
+// layout-window-mode-min-width来源于当前主题下面的map对象值
+@function p8-theme($key) {
+
+  $value: ();
+  // 确定注册主题当前要初始化的主题的名字
+  $p8-theme-name: get-current-theme-name();
+  $theme: p8-get-registered-theme($p8-theme-name);
+  $value: p8-deep-find-value($theme, $key, map-get($theme, $key));
+
+  @if ($value == null) {
+    @warn 'p8 Theme: `p8-theme()` cannot find value for key `' + $key + '` for theme `'+ $p8-theme-name +'`';
+  }
+
+  @return $value;
+}

@@ -1,0 +1,7 @@
+@import '~p8-theme/dist/themes/themes';
+@import "themes/themes";
+@import "components/components";
+
+@include p8-install() {
+  @include p8-theme-components
+}

@@ -1,0 +1,31 @@
+{
+  "name": "p8-theme",
+  "version": "1.2.1",
+  "private": false,
+  "main": "dist/main.scss",
+  "scripts": {
+    "1:build": "npx webpack",
+    "2:serve": "webpack serve",
+    "3:config": "npm config set registry http://192.168.0.11:18088/dhslwh/repository/dhsl_npm_releases/",
+    "4:publish": "npm version minor && npm run 3:config && npm publish"
+  },
+  "author": "huchongchong",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "node-sass-json-importer": "^4.3.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {}
+}

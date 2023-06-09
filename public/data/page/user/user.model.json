@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "msg": "验证失败",
+  "result": {
+    "USER_LOGIN": {
+      "userId": "zs",
+      "token": "dsgFv33Fcmza",
+      "name": "张三"
+    },
+    "loadTheme": "default"
+  }
+}

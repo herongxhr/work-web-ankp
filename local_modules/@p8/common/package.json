@@ -1,0 +1,48 @@
+{
+  "name": "@p8/common",
+  "version": "1.1.0",
+  "description": "东华水利平台通用功能",
+  "main": "dist/common.min.js",
+  "scripts": {
+    "1:serve": "webpack-dev-server --open --config webpack.dev.js",
+    "1:dev": "webpack --config webpack.dev.js",
+    "2:build:min": "webpack --config webpack.prod.js",
+    "3:build:normal": "webpack --config webpack.normal.js",
+    "4:config": "npm config set registry http://192.168.0.11:18088/dhslwh/repository/dhsl-npm-group/"
+  },
+  "author": "huchongchong",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-proposal-decorators": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/runtime": "^7.18.0",
+    "@babel/runtime-corejs3": "^7.18.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.72.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "qiankun": "^2.9.0"
+  },
+  "files": [
+    "dist/"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "theme": {
+    "color-basic-100": "#FFFFFF",
+    "color-basic-200": "#B1FCFF",
+    "color-basic-300": "#00FFF0",
+    "color-basic-400": "#5CFFB4",
+    "color-basic-500": "#4AEBA0",
+    "color-basic-600": "#018D01",
+    "color-basic-700": "#67B9FF",
+    "color-basic-800": "#0090FF",
+    "color-basic-900": "#36A9CE",
+    "color-basic-910": "#019AD3",
+    "color-basic-920": "#3660C1",
+    "color-basic-930": "#035CAF",
+    "color-basic-940": "#272B65",
+    "color-basic-950": "#182157",
+
+    "color-basic-gradient-100": "linear-gradient(90deg, #416EDC, #25348E)",
+    "color-basic-gradient-200": "linear-gradient(180deg, #3A95D5 0%, #3A95D5 100%)",
+    "color-basic-gradient-300": "linear-gradient(0deg, #00b5ff, #04639a)",
+    "color-basic-gradient-400": "linear-gradient(0deg, #00ffcd, #048880)",
+
+    "color-primary-100": "#f2f6ff",
+    "color-primary-200": "#d9e4ff",
+    "color-primary-300": "#a6c1ff",
+    "color-primary-400": "#598bff",
+    "color-primary-500": "#3366ff",
+
+    "color-info-100": "#FFF583",
+    "color-info-200": "#9A79D9",
+    "color-info-300": "#8FFFA4",
+    "color-info-400": "#FFA861",
+    "color-info-500": "#855D3E",
+
+    "color-success-100": "#f0fff5",
+    "color-success-200": "#ccfce3",
+    "color-success-300": "#8cfac7",
+    "color-success-400": "#2ce69b",
+    "color-success-500": "#00d68f",
+
+    "color-warning-100": "#fffdf2",
+    "color-warning-200": "#fff1c2",
+    "color-warning-300": "#ffe59e",
+    "color-warning-400": "#ffc94d",
+    "color-warning-500": "#ffaa00",
+
+    "color-danger-100": "#fff2f2",
+    "color-danger-200": "#ffd6d9",
+    "color-danger-300": "#FF2F60",
+    "color-danger-400": "#FF0000",
+    "color-danger-500": "#A70000",
+    "color-danger-600": "#AF0506",
+
+
+    "font-family-primary": "unquote('Open Sans, sans-serif')",
+
+    "text-1-font-size": "12px",
+    "text-1-font-weight": "500",
+    "text-1-line-height": "10px",
+
+    "text-2-font-size": "14px",
+    "text-2-font-weight": "600",
+    "text-2-line-height": "12px",
+
+    "text-3-font-size": "16px",
+    "text-3-font-weight": "700",
+    "text-3-line-height": "14px",
+
+    "text-4-font-size": "24px",
+    "text-4-font-weight": "800",
+    "text-4-line-height": "16px",
+
+    "text-5-font-size": "30px",
+    "text-5-font-weight": "1000",
+    "text-5-line-height": "20px",
+
+    "image-basic-100": "'/image/login.png'",
+    "image-basic-200": "'/image/login.png'",
+    "image-basic-300": "'/image/login.png'",
+    "image-basic-400": "'/image/login.png'",
+    "image-basic-500": "'/image/login.png'",
+    "image-basic-600": "'/image/login.png'",
+    "image-basic-700": "'/image/login.png'",
+    "image-basic-800": "'/image/login.png'",
+
+    "image-component-100": "'/image/login.png'",
+    "image-component-200": "'/image/login.png'",
+    "image-component-300": "'/image/login.png'",
+    "image-component-400": "'/image/login.png'",
+    "image-component-500": "'/image/login.png'",
+    "image-component-600": "'/image/login.png'",
+    "image-component-700": "'/image/login.png'",
+    "image-component-800": "'/image/login.png'"
+  }
+}

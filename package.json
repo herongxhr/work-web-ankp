@@ -1,0 +1,72 @@
+{
+  "name": "work-p8-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "1:config": "npm config set registry http://192.168.0.11:18088/dhslwh/repository/dhsl-npm-group/",
+    "dev": "vue-cli-service serve",
+    "3:build": "vue-cli-service build",
+    "3:build:development": "vue-cli-service build --mode development",
+    "4:lint": "vue-cli-service lint",
+    "5:clean": "npm cache clean --force"
+  },
+  "dependencies": {
+    "@p8/plat": "file:./local_modules/@p8/plat",
+    "animejs": "^3.2.1",
+    "axios": "^0.19.2",
+    "core-js": "^3.22.2",
+    "crypto-js": "^3.1.2",
+    "dayjs": "^1.11.2",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.15.6",
+    "js-cookie": "^2.2.1",
+    "lowdb": "^1.0.0",
+    "mark-list": "^0.1.1",
+    "nprogress": "^0.2.0",
+    "p8-theme": "file:./local_modules/p8-theme",
+    "recorder-core": "^1.2.22080700",
+    "systemjs": "^6.12.1",
+    "vue": "^2.6.14",
+    "vue-i18n": "^8.15.1",
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.17",
+    "@vue/cli-plugin-eslint": "~4.5.17",
+    "@vue/cli-plugin-router": "~4.5.17",
+    "@vue/cli-plugin-vuex": "~4.5.17",
+    "@vue/cli-service": "~4.5.17",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "node-sass-json-importer": "^4.3.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

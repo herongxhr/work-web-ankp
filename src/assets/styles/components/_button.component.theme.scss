@@ -1,0 +1,7 @@
+
+
+@mixin p8-button-theme() {
+  .p8-button {
+    color: p8-theme(color-basic-500);
+  }
+}

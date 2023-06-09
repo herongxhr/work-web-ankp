@@ -1,0 +1,29 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ *  定义全局变量map
+ *  作用：申明与主题相关的变量（map），导入操作主题相关的方法等
+ */
+/**
+ *  将主题和主题下个的各个组件挂载到主题下面，生成对应的css
+ */
+/**
+  *  系统主题提供的通用方法.
+ */
+.p8-theme-default .p8-button {
+  color: #035CAF; }
+
+.p8-theme-dark .p8-button {
+  color: #035CAF; }
+
+body {
+  background-color: red; }
+
+.p8-theme-default .el-submenu {
+  background-color: #434a50; }
+
+.p8-theme-dark .el-submenu {
+  background-color: #434a50; }
+

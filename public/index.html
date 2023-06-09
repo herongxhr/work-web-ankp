@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 使用 CDN 加速的 CSS 文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.css) { %>
+    <link href="<%= BASE_URL %><%= htmlWebpackPlugin.options.css[i] %>" rel="preload" as="style">
+    <link href="<%= BASE_URL %><%= htmlWebpackPlugin.options.css[i] %>" rel="stylesheet">
+    <% } %>
+    <title><%= VUE_APP_TITLE %></title>
+    <base href="<%= BASE_URL %>">
+    <style>
+      html, body, #app { height: 100%; margin: 0px; padding: 0px; width: 100%; }
+      .p8-home { background-color: #303133; height: 100%; display: flex; flex-direction: column; }
+      .p8-home__main { user-select: none; width: 100%; flex-grow: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+      .p8-home__footer { width: 100%; flex-grow: 0; text-align: center; padding: 1em 0; }
+      .p8-home__footer > a { font-size: 12px; color: #ABABAB; text-decoration: none; }
+      .p8-home__loading { height: 52px; width: 52px; margin-bottom: 20px; }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>很抱歉，如果没有 JavaScript 支持，网站将不能正常工作。请启用浏览器的 JavaScript 然后继续。</strong>
+    </noscript>
+    <div id="app">
+      <div class="p8-home">
+        <div class="p8-home__main">
+          <img class="p8-home__loading"
+               src="./image/loading/loading-chart.svg"
+               alt="loading">
+        </div>
+        <div class="p8-home__footer">
+          <a href="#" target="_blank">
+            Copyright © 2022 DHSL
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 开发环境保证测试运行时完整的JS文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.ext) { %>
+    <script src="<%= BASE_URL %><%= htmlWebpackPlugin.options.ext[i] %>"></script>
+    <% } %>
+
+    <!-- 使用 CDN 加速的 JS 文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.js) { %>
+    <script src="<%= BASE_URL %><%= htmlWebpackPlugin.options.js[i] %>"></script>
+    <% } %>
+  </body>
+</html>

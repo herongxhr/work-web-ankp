@@ -1,0 +1,59 @@
+@import '../themes/mapping';
+
+// 往当前map中添加新的值
+@function map-set($map, $key, $value: null) {
+  $new: ($key: $value);
+  @return map-merge($map, $new);
+}
+
+// 得到系统注册的主题名称
+// 返回 default cosmic ...(主题名称)
+@function p8-get-enabled-themes() {
+  @if (length($p8-enabled-themes) == 0) {
+    @each $theme-name, $theme in $p8-themes {
+      $p8-enabled-themes: append($p8-enabled-themes, $theme-name) !global;
+    }
+  }
+
+  @return $p8-enabled-themes;
+}
+
+// 得到nb-get-enabled-themes()主题的最后一个主题名字.
+// 返回：(default cosmic) ==> cosmic
+@function get-last-enabled-theme() {
+  $themes: p8-get-enabled-themes();
+  @return nth($themes, length($themes));
+}
+
+// 得到注册主题的map值
+// 返回 (link-text-color: text-primary-color, ....) ==> map
+@function p8-get-registered-theme($name) {
+  $theme: map-get($p8-themes, $name);
+
+  // TODO: check if optimal place
+  @if ($theme == null) {
+    @error 'p8 Theme: theme `' + $name + '` is not registered with `p8-register-theme` function.';
+  }
+  @return $theme;
+}
+
+// 将主题需要的可配置变量以map的形式挂接到对应的主题下
+// @return：(default: (key：value), cosmic: (key:value))
+// 备注：上面那些方法中的$nb-themes都是这个方法的返回值
+@function p8-register-theme($theme, $name, $parent-name: null) {
+  $theme-data: ();
+  @if ($parent-name != null) {
+    $parent-theme: map-get($p8-themes, $parent-name);
+    @if ($parent-theme == null) {
+      @error 'p8 Theme: parent theme `' + $parent-name + '` is not registered or imported.';
+    }
+    // 合并父主题map
+    $theme: map-merge($parent-theme, $theme);
+  }
+  $theme: map-merge($eva-mapping, $theme);
+  $p8-themes: map-set($p8-themes, $name, $theme) !global;
+  @return $p8-themes;
+}
+
+
+

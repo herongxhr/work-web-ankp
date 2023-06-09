@@ -1,0 +1,137 @@
+{
+  "code": 200,
+  "msg": "接口错误",
+  "result": {
+    "MENU_ALL": [
+      {
+        "id": "sys01",
+        "appId": "1",
+        "parent": null,
+        "name": "测试菜单一",
+        "code": "01",
+        "path": "main",
+        "url": "/main",
+        "icon": "icon-icon_setting",
+        "leaf": true,
+        "levels": 1,
+        "parentName": null,
+        "children": []
+      },
+      {
+        "id": "sys02",
+        "appId": "1",
+        "parent": null,
+        "name": "测试菜单二",
+        "code": "02",
+        "path": "demo2",
+        "url": "/demo2",
+        "icon": "icon-icon_work",
+        "leaf": false,
+        "levels": 2,
+        "parentName": null,
+        "children": [
+          {
+            "id": "C211FCF8BEF443F79CB81FA8418F1633",
+            "appId": "1",
+            "parent": "sys02",
+            "name": "子菜单一",
+            "code": "0202",
+            "path": "boss",
+            "url": "/demo2/boss",
+            "icon": "icon-icon_attestation",
+            "leaf": true,
+            "levels": 1,
+            "parentName": "测试菜单二",
+            "children": []
+          },
+          {
+            "id": "C211FCF8BEF443S89CB81FA8418F1346",
+            "appId": "1",
+            "parent": "sys02",
+            "name": "子菜单二",
+            "code": "0202",
+            "path": "manage",
+            "url": "/demo2/base1",
+            "icon": "icon-icon_attestation",
+            "leaf": true,
+            "levels": 1,
+            "parentName": "测试菜单二",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sys03",
+        "appId": "1",
+        "parent": null,
+        "name": "测试菜单三",
+        "code": "02",
+        "path": "demo3",
+        "url": "/demo3",
+        "icon": "icon-icon_work",
+        "leaf": false,
+        "levels": 4,
+        "parentName": null,
+        "children": [
+          {
+            "id": "C211FCF8SDS5543F79CB81FA8418F1633",
+            "appId": "1",
+            "parent": "sys03",
+            "name": "侧边栏一",
+            "code": "0202",
+            "path": "side",
+            "url": "/demo3/side",
+            "icon": "icon-icon_attestation",
+            "leaf": true,
+            "levels": 3,
+            "parentName": "测试菜单三",
+            "children": [
+              {
+                "id": "X431FCF8BEF443F7SDF63FA8418F1633",
+                "appId": "1",
+                "parent": "sys03",
+                "name": "侧边栏子菜单一",
+                "code": "0202",
+                "path": "base",
+                "url": "/demo3/side/base",
+                "icon": "icon-icon_attestation",
+                "leaf": true,
+                "levels": 2,
+                "parentName": "侧边栏一",
+                "children": []
+              },
+              {
+                "id": "B903FCF8BEF443F7SDF6SD21418F1633",
+                "appId": "1",
+                "parent": "sys03",
+                "name": "侧边栏子菜单二",
+                "code": "0202",
+                "path": "base1",
+                "url": "/demo3/side/base1",
+                "icon": "icon-icon_attestation",
+                "leaf": true,
+                "levels": 2,
+                "parentName": "侧边栏一",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "C211FCF8BEF443F79CB81FA8418F1633",
+            "appId": "1",
+            "parent": "sys03",
+            "name": "侧边栏二",
+            "code": "0202",
+            "path": "side1",
+            "url": "/demo3/side1",
+            "icon": "icon-icon_attestation",
+            "leaf": true,
+            "levels": 1,
+            "parentName": "测试菜单三",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+/**
+  *  系统主题提供的通用方法.
+ */
+
+// webkit内核下滚动条样式
+@mixin p8-scrollbars($fg, $bg, $size, $border-radius: $size / 2) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $fg;
+    cursor: pointer;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg;
+  }
+}
